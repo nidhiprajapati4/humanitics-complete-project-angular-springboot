@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="humanitics-assign-main" />
         <module name="humanitics" />
+        <module name="java-humanitics-assign-main" />
       </profile>
     </annotationProcessing>
   </component>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="humanitics" options="-parameters" />
       <module name="humanitics-assign-main" options="-parameters" />
+      <module name="java-humanitics-assign-main" options="-parameters" />
     </option>
   </component>
 </project>

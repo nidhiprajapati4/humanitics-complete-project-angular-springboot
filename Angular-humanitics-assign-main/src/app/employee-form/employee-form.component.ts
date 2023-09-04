@@ -4,7 +4,6 @@ import { Employee } from '../Model/employee.model';
 import { EmployeeService } from '../service/employee-service.service';
 import { Department } from '../Model/department.model';
 import { DataService } from '../service/data-service.service';
-import * as moment from 'moment';
 
 @Component({
   selector: 'app-employee-form',
@@ -52,7 +51,6 @@ export class EmployeeFormComponent implements OnInit {
 
   onSubmit() {
     const employeeData = this.employeeForm.value;
-    this.editedEmployeeId = employeeData.id;
 
     if (this.editingMode) {
       this.employeeService
@@ -85,7 +83,7 @@ export class EmployeeFormComponent implements OnInit {
       lastName: employee.lastName,
       dateOfBirth: new Date(employee.dateOfBirth.toString()),
       gender: employee.gender,
-      active: employee.active
+      active: employee.active,
     });
   }
 

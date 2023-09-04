@@ -28,7 +28,6 @@ public class EmployeeService {
 
     public Employee updateEmployee(Long id, Employee employeeDetails) {
         Employee employee = getEmployeeById(id);
-        employee.setId(employeeDetails.getId());
         employee.setFirstName(employeeDetails.getFirstName());
         employee.setLastName(employeeDetails.getLastName());
         employee.setDateOfBirth(employeeDetails.getDateOfBirth());
