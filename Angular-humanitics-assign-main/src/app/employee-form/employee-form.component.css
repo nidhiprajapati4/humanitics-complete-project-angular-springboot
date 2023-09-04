@@ -1,0 +1,15 @@
+.formdiv{
+    float: right;
+    padding-right: 40px;
+}
+
+p-radioButton{
+    margin-left: 45px;
+}
+p-checkbox{
+    margin-left: 20px;
+}
+.female{
+    margin-left: 20px;
+
+}

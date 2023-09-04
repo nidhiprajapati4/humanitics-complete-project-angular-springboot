@@ -1,0 +1,80 @@
+<div class="formdiv">
+  <h1>Employee Form</h1>
+  <h2>{{ editingMode ? "Edit Employee" : "Add Employee" }}</h2>
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div>
+      <input
+        type="text"
+        id="employeeCode"
+        pInputText
+        formControlName="employeeCode"
+        placeholder="Employee Code"
+      />
+    </div>
+    <br />
+    <div>
+      <input
+        type="text"
+        id="firstName"
+        pInputText
+        formControlName="firstName"
+        placeholder="First Name"
+      />
+    </div>
+    <br />
+    <div>
+      <input
+        type="text"
+        id="lastName"
+        pInputText
+        formControlName="lastName"
+        placeholder="Last Name"
+      />
+    </div>
+    <br />
+    <div>
+      <p-calendar
+        [showIcon]="true"
+        placeholder="Date Of Birth"
+        formControlName="dateOfBirth"
+        id="dateOfBirth"
+      ></p-calendar>
+    </div>
+
+    <br />
+    <br />
+    <label for="male">Male</label>
+    <p-radioButton
+      formControlName="gender"
+      name="gender"
+      value="Male"
+      inputId="male"
+    ></p-radioButton>
+    <label class="female">Female</label>
+    <p-radioButton
+      formControlName="gender"
+      name="gender"
+      value="Female"
+      inputId="female"
+    ></p-radioButton>
+    <br /><br />
+    <label for="active">Is Active</label>
+    <p-checkbox
+      formControlName="active"
+      [binary]="true"
+      inputId="binary"
+      id="active"
+    ></p-checkbox>
+    <br /><br />
+    <p-dropdown
+      formControlName="department"
+      [options]="departmentdetails"
+      optionLabel="departmentName"
+      id="departmentdetails.id"
+    ></p-dropdown>
+    <br /><br />
+    <p-button type="submit">{{ editingMode ? "Update" : "Add" }}</p-button
+    >&nbsp;
+    <p-button type="button" (click)="clearForm()">Clear</p-button>
+  </form>
+</div>

@@ -1,0 +1,34 @@
+<div class="emmployee-list">
+  <h1>Employee List</h1>
+  <p-table
+    #dt1
+    [value]="employees"
+    [rows]="10"
+    [paginator]="true"
+  >
+    <ng-template pTemplate="header">
+      <th>EmployeeCode</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>DateOfBirth</th>
+      <th>Gender</th>
+      <th>IsActive</th>
+      <th>Action</th>
+    </ng-template>
+    <ng-template pTemplate="body" let-employee>
+      <tr>
+        <td>{{ employee.employeeCode }}</td>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.dateOfBirth | date : "dd/MM/yy" }}</td>
+        <td>{{ employee.gender }}</td>
+        <td>{{ employee.active }}</td>
+        <td>
+          <p-button (click)="editEmployee(employee)">Edit</p-button>
+          &nbsp;
+          <p-button (click)="deleteEmployee(employee.id)">Delete</p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

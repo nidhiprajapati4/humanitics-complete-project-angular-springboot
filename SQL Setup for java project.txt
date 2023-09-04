@@ -1,0 +1,23 @@
+Download JDBC Driver
+https://learn.microsoft.com/en-us/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver16
+
+Classpath in env variable:
+C:\Users\PREM\Downloads\sqljdbc_12.4.0.0_enu\sqljdbc_12.4\enu\jars\mssql-jdbc-12.4.0.jre11.jar
+
+Move bin/JDK at the top in environment variable
+
+
+
+SQL Server:
+Create a new user under Security, by right click on Logins
+Go to the security under database for which we need access.
+add a new user by right click on users under security
+Allow completed permissions from membership(Side Menu).
+
+Enable SQL Server authentication mode from properties of sql server(right click on sql server from SSMS), under security.
+
+Restart Sql server from services(search services on start search).
+
+
+
+
